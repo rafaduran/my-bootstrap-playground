@@ -66,6 +66,16 @@
               <button type="submit" class="btn">Sign in</button>
             </form>
           </div><!--/.nav-collapse -->
+          <ul class="nav pull-right">
+            <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Your account<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Cart</a></li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -85,10 +95,10 @@
           <p><a class="btn" href="#">View details &raquo;</a></p>
         </div>
         <div class="span9">
-          <table class="table table-striped table-bordered">
+          <table class="table table-striped table-bordered table-hover tablesorter">
             <thead>
               <tr>
-                <th>Heading</th>
+                <th>Heading<i class="icon-chevron-down"></i></th>
                 <th>Heading</th>
                 <th>Heading</th>
                 <th>Heading</th>
@@ -97,46 +107,46 @@
             </thead>
             <tbody>
               <tr>
-                <td>Info</td>
-                <td>Info</td>
-                <td>Info</td>
-                <td>Info</td>
-                <td>Info</td>
+                <td>Info 1</td>
+                <td>Info 1</td>
+                <td>Info 1</td>
+                <td>Info 1</td>
+                <td>Info 1</td>
               </tr>
               <tr>
-                <td>Info</td>
-                <td>Info</td>
-                <td>Info</td>
-                <td>Info</td>
-                <td>Info</td>
+                <td>Info 2</td>
+                <td>Info 2</td>
+                <td>Info 2</td>
+                <td>Info 2</td>
+                <td>Info 2</td>
               </tr>
               <tr>
-                <td>Info</td>
-                <td>Info</td>
-                <td>Info</td>
-                <td>Info</td>
-                <td>Info</td>
+                <td>Info 3</td>
+                <td>Info 3</td>
+                <td>Info 3</td>
+                <td>Info 3</td>
+                <td>Info 3</td>
               </tr>
               <tr>
-                <td>Info</td>
-                <td>Info</td>
-                <td>Info</td>
-                <td>Info</td>
-                <td>Info</td>
+                <td>Info 4</td>
+                <td>Info 4</td>
+                <td>Info 4</td>
+                <td>Info 4</td>
+                <td>Info 4</td>
               </tr>
               <tr>
-                <td>Info</td>
-                <td>Info</td>
-                <td>Info</td>
-                <td>Info</td>
-                <td>Info</td>
+                <td>Info 5</td>
+                <td>Info 5</td>
+                <td>Info 5</td>
+                <td>Info 5</td>
+                <td>Info 5</td>
               </tr>
               <tr>
-                <td>Info</td>
-                <td>Info</td>
-                <td>Info</td>
-                <td>Info</td>
-                <td>Info</td>
+                <td>Info 6</td>
+                <td>Info 6</td>
+                <td>Info 6</td>
+                <td>Info 6</td>
+                <td>Info 6</td>
               </tr>
             <tbody>
           </table>
@@ -154,19 +164,22 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../assets/js/jquery.js"></script>
-    <script src="../assets/js/bootstrap-transition.js"></script>
-    <script src="../assets/js/bootstrap-alert.js"></script>
-    <script src="../assets/js/bootstrap-modal.js"></script>
-    <script src="../assets/js/bootstrap-dropdown.js"></script>
-    <script src="../assets/js/bootstrap-scrollspy.js"></script>
-    <script src="../assets/js/bootstrap-tab.js"></script>
-    <script src="../assets/js/bootstrap-tooltip.js"></script>
-    <script src="../assets/js/bootstrap-popover.js"></script>
-    <script src="../assets/js/bootstrap-button.js"></script>
-    <script src="../assets/js/bootstrap-collapse.js"></script>
-    <script src="../assets/js/bootstrap-carousel.js"></script>
-    <script src="../assets/js/bootstrap-typeahead.js"></script>
-
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.tablesorter.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("table").tablesorter({
+          sortList: [[0,0]],
+          debug: true,
+          headers: {
+            1: {sorter: false},
+            2: {sorter: false},
+            3: {sorter: false},
+            4: {sorter: false},
+          }
+        });
+      });
+    </script>
   </body>
 </html>
